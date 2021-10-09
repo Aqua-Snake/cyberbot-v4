@@ -141,7 +141,7 @@
         "GAN_IMAGE": {
             "description": "Type image link for Gan Style plugin.",
             "required": true,
-            "value": "https://i.ibb.co/jf9Tkq6/logo.jpg"
+            "value": "https://i.ibb.co/h26VWqL/CyberBot.jpg"
         },
         "NO_ONLINE": {
             "description": "Type true if you don't want to appear online.",
