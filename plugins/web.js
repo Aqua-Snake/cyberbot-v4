@@ -15,6 +15,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('web');
 const SLang = Language.getString('webss');
+
 /*
 var LANG = { RES: '' }
 if (Config.LANG == 'TR') LANG.RES == '*Komut Bulunamadı!*\n*Benzer Komut:*'
@@ -312,7 +313,7 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         else if (short > 0.6 && !match[1].includes('short')) { return await message.client.sendMessage(id,LANG.RES + ' $short', MessageType.text) }
         else if (calc > 0.6 && !match[1].includes('calc')) { return await message.client.sendMessage(id,LANG.RES + ' $calc', MessageType.text) }
         else if (whois > 0.6 && !match[1].includes('whois')) { return await message.client.sendMessage(id,LANG.RES + ' $whois', MessageType.text) }
-        /* else if (mp4enhance > 0.6 && !match[1].includes('mp4enhance')) { return await message.client.sendMessage(id,LANG.RES + ' $mp4enhance', MessageType.text) }
+        else if (mp4enhance > 0.6 && !match[1].includes('mp4enhance')) { return await message.client.sendMessage(id,LANG.RES + ' $mp4enhance', MessageType.text) }
         else if (interp > 0.6 && !match[1].includes('interp')) { return await message.client.sendMessage(id,LANG.RES + ' $img', MessageType.text) }
         else if (mp4slowmo > 0.6 && !match[1].includes('mp4slowmo')) { return await message.client.sendMessage(id,LANG.RES + ' $mp4slowmo', MessageType.text) }
         else if (x4mp4 > 0.6 && !match[1].includes('x4mp4')) { return await message.client.sendMessage(id,LANG.RES + ' $x4mp4', MessageType.text) }
@@ -367,8 +368,7 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         
     }
 }));
-*/
-// https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
+
 function speedText(speed) {
     let bits = speed * 8;
     const units = ['', 'K', 'M', 'G', 'T'];
@@ -381,7 +381,8 @@ function speedText(speed) {
 
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
-
+*/
+// https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
 Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});

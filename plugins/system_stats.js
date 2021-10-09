@@ -23,7 +23,7 @@ if (Config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage (message.jid, '╔══════ *CYBER BOT* ══════╗\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*BOT ONLINE*\n_Type .ca For Command list_\n ' , MessageType.text);
+            await message.client.sendMessage (message.jid, '╔══════ *CYBER BOT* ══════╗\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*BOT ONLINE*\n_Type .ca For Command list_\n_Type .help For get help_\n  ' , MessageType.text);
         }
         else {
             const pow = '*Powered by Cyber Bot*'
@@ -54,7 +54,7 @@ else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
 
         if (Config.ALIVEMSG == 'default') {
-            await message.client.sendMessage (message.jid, '╔══════ *CYBER BOT* ══════╗\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*BOT ONLINE*\n_Type .ca For Command list_\n ' , MessageType.text);
+            await message.client.sendMessage (message.jid, '╔══════ *CYBER BOT* ══════╗\n\n*Version:* ```'+Config.VERSION+'```\n*Branch:* ```'+Config.BRANCH+'```\n*BOT ONLINE*\n_Type .ca For Command list_\nType .help For get help_\n ' , MessageType.text);
        
         }
         else {

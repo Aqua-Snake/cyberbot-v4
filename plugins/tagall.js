@@ -20,7 +20,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-Asena.addCommand({pattern: 'hidetag ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+Asena.addCommand({pattern: 'hidetag ?(.*)', fromMe: true, desc: Lang.HIDETAG_DESC }, (async (message, match) => {
 
     if (!message.reply_message) {
         if (match[1] !== '') {
