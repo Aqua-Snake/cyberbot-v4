@@ -40,7 +40,6 @@ if (cn.WORKTYPE == 'private') {
 
     }));
 
-    /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
 
         const userName = match[1]
@@ -61,7 +60,7 @@ if (cn.WORKTYPE == 'private') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
+              caption: 'Made by CyberBot',
             })
           })
           .catch(
@@ -69,7 +68,7 @@ if (cn.WORKTYPE == 'private') {
           )
       },
     )
-    */
+    
 }
 else if (cn.WORKTYPE == 'public') {
 
@@ -121,7 +120,7 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
-    /*
+	
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
         const userName = match[1]
@@ -142,7 +141,7 @@ else if (cn.WORKTYPE == 'public') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
+              caption: 'Made by CyberBot',
             })
           })
           .catch(
@@ -170,7 +169,7 @@ else if (cn.WORKTYPE == 'public') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by WhatsAsena',
+              caption: 'Made by CyberBot',
             })
           })
           .catch(
@@ -178,5 +177,5 @@ else if (cn.WORKTYPE == 'public') {
           )
       },
     )
-    */
+   
 }
