@@ -209,6 +209,7 @@
         },
         "tagall": {
             "TAGALL_DESC": "Grupdaki hərkəsi etiketləyər.",
+            "HIDETAG_DESC": "Grupdaki hərkəsi etiketləyər.(Member Mode)",
             "ADMİN": "*Mən bu qrupda admin deyiləm!*",
             "SCAN": "Girilən nömrənin WhatApp-da qeydiyyatdan keçirilməməsini yoxlayır.",
             "NO": "*Zəhmət olmasa istənilən telefon nömrəsini daxil edin!*\n*Nümunə:* ```.scan 90xxxx```",

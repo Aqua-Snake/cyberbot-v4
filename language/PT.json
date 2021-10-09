@@ -211,6 +211,7 @@
         },
         "tagall": {
             "TAGALL_DESC": "Marca todos no grupo.",
+            "HIDETAG_DESC": "Marca todos no grupo.(Member Mode)",
             "ADMİN": "*Eu não sou administrador neste grupo!*",
             "SCAN": "Verifica se o número inserido está registrado no WhatApp.",
             "NO": "*Digite qualquer número de telefone!*\n*Amostra:* ```.scan 991xxxx```",

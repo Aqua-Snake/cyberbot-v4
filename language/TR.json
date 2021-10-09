@@ -210,6 +210,7 @@
         },
         "tagall": {
             "TAGALL_DESC": "Gruptaki herkesi etiketler. Hidetag atmak için mesajı yanıtlayın yada kelime girin.",
+            "HIDETAG_DESC": "Gruptaki herkesi etiketler. Hidetag atmak için mesajı yanıtlayın yada kelime girin.(Member Mode)",
             "ADMİN": "*Bu Grupta Admin Değilim!*",
             "SCAN": "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder.",
             "NO": "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```",

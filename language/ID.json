@@ -211,6 +211,7 @@
         },
         "tagall": {
             "TAGALL_DESC": "Menandai semua orang di grup.",
+            "HIDETAG_DESC": "Menandai semua orang di grup.(Member Mode)",
             "ADMİN": "*Saya bukan admin di grup ini!*",
             "SCAN": "Memeriksa apakah nomor yang dimasukkan terdaftar di WhatApp.",
             "NO": "*Harap Masukkan Nomor Telepon Apa Pun!*\n*Sampel:* ```.scan 90xxxx```",

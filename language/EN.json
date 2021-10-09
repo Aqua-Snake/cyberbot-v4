@@ -210,7 +210,8 @@
             "SYSD_DESC": "Shows the system properties."
         },
         "tagall": {
-            "TAGALL_DESC": "Tags everyone in the group.",
+            "TAGALL_DESC": "Tags everyone in the group.(Admin Mode)",
+            "HIDETAG_DESC": "Tags everyone in the group.(Member Mode)",
             "ADMİN": "*I am not admin in this group!*",
             "SCAN": "Checks whether the entered number is registered on WhatApp.",
             "NO": "*Please Enter Any Phone Number!*\n*Example:* ```.scan 90xxxx```",
