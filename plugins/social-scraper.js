@@ -60,7 +60,7 @@ if (cn.WORKTYPE == 'private') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by CyberBot',
+              caption: 'Made by CBot',
             })
           })
           .catch(
@@ -68,7 +68,6 @@ if (cn.WORKTYPE == 'private') {
           )
       },
     )
-    
 }
 else if (cn.WORKTYPE == 'public') {
 
@@ -120,8 +119,7 @@ else if (cn.WORKTYPE == 'public') {
         });
 
     }));
-	
-    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
+   Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
         const userName = match[1]
 
@@ -141,7 +139,7 @@ else if (cn.WORKTYPE == 'public') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by CyberBot',
+              caption: 'Made by CBot',
             })
           })
           .catch(
@@ -169,7 +167,7 @@ else if (cn.WORKTYPE == 'public') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Made by CyberBot',
+              caption: 'Made by CBot',
             })
           })
           .catch(
@@ -177,5 +175,4 @@ else if (cn.WORKTYPE == 'public') {
           )
       },
     )
-   
 }
