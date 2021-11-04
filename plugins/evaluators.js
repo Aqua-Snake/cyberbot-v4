@@ -1,9 +1,9 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2020 Aqua Snake.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+Cyber Bot - Aqua Snake
 */
 
 const Asena = require('../events');
@@ -155,7 +155,7 @@ antlch()
 var ldc = ''
 if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
 if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*Link Detected!*'
+if (Config.LANG == 'EN') ldc = '*Link Detected!* \n ```Links are not Allowed..!!!.\n You have only 5miniute Please Delete it```'
 if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!*'
 if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
 if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
@@ -172,26 +172,48 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data });
-            await message.client.groupRemove(message.jid, [message.data.participant])         
-            
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'5', MessageType.text, {quoted: message.data });
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'4', MessageType.text, {quoted: message.data });
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'3', MessageType.text, {quoted: message.data });
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'2', MessageType.text, {quoted: message.data });
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'1', MessageType.text, {quoted: message.data });
+            await new Promise(r => setTimeout(r, 60000));
+            await message.client.sendMessage(message.jid,'Time is Over..Bye Bye', MessageType.text, {quoted: message.data });
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,'Removed...', MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-           await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data });
-            await message.client.groupRemove(message.jid, [message.data.participant])        
-            
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'5', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'4', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'3', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'2', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'1', MessageType.text, {quoted: message.data });
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,'Removed', MessageType.text, {quoted: message.data })
         } 
         else if (message.message.match(/((?:[.]com)\b)/i)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-           await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data });
-            await message.client.groupRemove(message.jid, [message.data.participant])        
-            
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'5', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'4', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'3', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'2', MessageType.text, {quoted: message.data });
+            await message.client.sendMessage(message.jid,'1', MessageType.text, {quoted: message.data });
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,'Removed', MessageType.text, {quoted: message.data })
         } 
     }
 }));
