@@ -7,7 +7,7 @@ WhatsAsena - Yusuf Usta
 */
 
 const chalk = require('chalk');
-const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
+const {WAConnection, MessageOptions, MessageType} = require('@aqua-snake/cyber-bot-web');
 const {StringSession} = require('./whatsasena/');
 const fs = require('fs');
 

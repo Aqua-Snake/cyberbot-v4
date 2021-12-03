@@ -14,7 +14,7 @@ const chalk = require('chalk');
 const config = require('./config');
 const axios = require('axios');
 const Heroku = require('heroku-client');
-const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
+const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@aqua-snake/cyber-bot-web');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
@@ -305,7 +305,7 @@ async function whatsAsena () {
         }
     })    
     conn.on('connecting', async () => {
-        console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
+        console.log(`${chalk.green.bold('Cyber')}${chalk.blue.bold('Bot')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
@@ -321,14 +321,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         // ==================== External Plugins ====================
         var plugins = await plugindb.PluginDB.findAll();
         plugins.map(async (plugin) => {
-            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
-                console.log(plugin.dataValues.name);
-                var response = await got(plugin.dataValues.url);
-                if (response.statusCode == 200) {
-                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
-                    require('./plugins/' + plugin.dataValues.name + '.js');
-                }     
-            }
+            try {
+              if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
+                  console.log(plugin.dataValues.name);
+                  var response = await got(plugin.dataValues.url);
+                  if (response.statusCode == 200) {
+                      fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
+                      require('./plugins/' + plugin.dataValues.name + '.js');
+                  }     
+              }
+          } catch {
+              console.log('Some Plugins Are Corrupted: ' + plugin.dataValues.name)
+          }
         });
         // ==================== End External Plugins ====================
 
@@ -640,11 +644,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        if (msg.key.fromMe && command.deleteCommand) { 
-                            var wrs = conn.user.phone.wa_version.split('.')[2]
-                            if (wrs < 11) {
-                                await whats.delete() 
-                            }
+                        if (msg.key.fromMe && command.deleteCommand && !msg.key.remoteJid.includes('-')) {
+                          await whats.delete()                          
                         } 
                         // ==================== End Message Catcher ====================
 
