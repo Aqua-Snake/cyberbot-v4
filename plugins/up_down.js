@@ -7,7 +7,7 @@ WhatsAsena - Yusuf Usta
 
 
 const Asena = require('../events');
-const {MessageType, Mimetype} = require('@aqua-snake/cyber-bot-web');
+const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const got = require('got')
 const fs = require('fs')
 const Language = require('../language');

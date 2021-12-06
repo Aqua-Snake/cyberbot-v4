@@ -1,12 +1,12 @@
-/* Copyright (C) 2020 Aqua Snake.
+/* Copyright (C) 2020 Yusuf Usta.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-Cyber Bot - Aqua Snake
+WhatsAsena - Yusuf Usta
 */
 
-const {MessageType, GroupSettingChange} = require('@aqua-snake/cyber-bot-web');
+const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
 const Asena = require('../events');
 const Config = require('../config');
 

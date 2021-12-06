@@ -1,13 +1,5 @@
-/* Copyright (C) 2020 Aqua Snake.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
-*/
-
 const Asena = require('../events');
-const {MessageType, Mimetype} = require('@aqua-snake/cyber-bot-web');
+const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');

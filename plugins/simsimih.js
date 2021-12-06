@@ -1,13 +1,11 @@
-/* Copyright (C) 2020 Aqua Snake.
-
+/* Copyright (C) 2021 Vai838.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
+Developer -Aqua- Snake
 */
 
 const Asena = require('../events');
-const {MessageType} = require('@aqua-snake/cyber-bot-web');
+const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
 
@@ -18,9 +16,9 @@ const NOT_FOUNDAC = "```oops...I couldn't find a category with this name. 😖``
 
 if (Config.WORKTYPE == 'private') {
 
-Asena.addCommand({pattern: 'ana ?(.*)', fromMe: true, desc: 'Chat with an AI Bot.\n Use .ana <message>'}, async (message, match) => {
+Asena.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: 'Chat with an AI Bot.\n Use .bot <message>'}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
-	const url = `https://api.simsimi.net/v2/?text=${match[1]}&lc=update..&cf=ture`;
+	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);
@@ -31,9 +29,9 @@ Asena.addCommand({pattern: 'ana ?(.*)', fromMe: true, desc: 'Chat with an AI Bot
 });
 }
 else if (Config.WORKTYPE == 'public') {
-Asena.addCommand({pattern: 'ana ?(.*)', fromMe: false, desc: 'Chat with an AI Bot.\n Use .ana <message>'}, async (message, match) => {
+Asena.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: 'Chat with an AI Bot.\n Use .bot <message>'}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(NEED_LOCATIONA);
-	const url = `https://api.simsimi.net/v2/?text=${match[1]}&lc=update..&cf=ture`;
+	const url = `https://api.simsimi.net/v1/?text=${match[1]}&lang=en&cf=true`;
 	try {
 		const response = await got(url);
 		const json = JSON.parse(response.body);

@@ -1,25 +1,17 @@
-/* Copyright (C) 2020 Aqua Snake.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
-*/
-
 const Asena = require('../events');
-const {MessageType} = require('@aqua-snake/cyber-bot-web');
+const {MessageType} = require('@adiwajshing/baileys');
 
 
 Asena.addCommand({pattern: 'antispam ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
-  await message.client.sendMessage(message.jid, '.mute', MessageType.text);
+  await message.client.sendMessage(message.jid, '.mute 5m', MessageType.text);
   await message.client.sendMessage(message.jid, 'Activating Antispam Mode', MessageType.text);
   await message.client.sendMessage(message.jid, 'AɳƚιSραɱ \nRιზზσɳ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n A\n ɳ\n ƚ\n ι\n S\n ρ\n α\n ɱ\n\n R\n ι\n ზ\n ზ\n σ\n ɳ\n\n 🄲🅈🄱🄴🅁 \n🄱🄾🅃\n ', MessageType.text);
   await message.client.sendMessage(message.jid, 'AɳƚιSραɱ \nRιზზσɳ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n A\n ɳ\n ƚ\n ι\n S\n ρ\n α\n ɱ\n\n R\n ι\n ზ\n ზ\n σ\n ɳ\n\n 🄲🅈🄱🄴🅁 \n🄱🄾🅃\n ', MessageType.text);
   await message.client.sendMessage(message.jid, 'AɳƚιSραɱ \nRιზზσɳ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n A\n ɳ\n ƚ\n ι\n S\n ρ\n α\n ɱ\n\n R\n ι\n ზ\n ზ\n σ\n ɳ\n\n 🄲🅈🄱🄴🅁 \n🄱🄾🅃\n ', MessageType.text);
   await message.client.sendMessage(message.jid, 'AɳƚιSραɱ \nRιზზσɳ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n A\n ɳ\n ƚ\n ι\n S\n ρ\n α\n ɱ\n\n R\n ι\n ზ\n ზ\n σ\n ɳ\n\n 🄲🅈🄱🄴🅁 \n🄱🄾🅃\n  ', MessageType.text);
   await message.client.sendMessage(message.jid, 'AɳƚιSραɱ \nRιზზσɳ \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n A\n ɳ\n ƚ\n ι\n S\n ρ\n α\n ɱ\n\n R\n ι\n ზ\n ზ\n σ\n ɳ\n\n 🄲🅈🄱🄴🅁 \n🄱🄾🅃\n ', MessageType.text);
-  await message.client.sendMessage(message.jid, 'Antispam Mode This is useful for prevent from spams', MessageType.text);
+  await message.client.sendMessage(message.jid, 'Antispam Mode This is useful for prevent from spams.\n *Don not go ahead*, MessageType.text);
   await message.client.sendMessage(message.jid, '.hidetag *All group members must clear your chats*', MessageType.text);
 
 }));

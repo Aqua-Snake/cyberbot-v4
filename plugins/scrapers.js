@@ -1,13 +1,13 @@
-/* Copyright (C) 2020 Aqua Snake.
+/* Copyright (C) 2020 Yusuf Usta.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-Cyber Bot - Aqua Snake
+WhatsAsena - Yusuf Usta
 */
 
 const Asena = require('../events');
-const {MessageType,Mimetype} = require('@aqua-snake/cyber-bot-web');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
 const LanguageDetect = require('languagedetect');
@@ -17,8 +17,6 @@ const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-const exec = require('child_process').exec;
-const os = require("os");
 //============================== LYRICS =============================================
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
@@ -352,13 +350,6 @@ if (config.WORKTYPE == 'private') {
         var ldet = lngDetector.detect(msg)
         async function upperfirstLetter(letter) {
             return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
-        }
-         var cls1 = ""
-        try {
-          cls1 = await upperfirstLetter(ldet[0][0])
-        } catch {
-            var ufns = await translatte("Dil Bulunamadı", { from: "TR", to: config.LANG})
-            return await message.client.sendMessage(message.jid,ufns.text,MessageType.text)
         }
         var cls1 = await upperfirstLetter(ldet[0][0])
         var cls2 = ldet[0][1].toString()
@@ -855,13 +846,6 @@ else if (config.WORKTYPE == 'public') {
         var ldet = lngDetector.detect(msg)
         async function upperfirstLetter(letter) {
             return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
-        }
-         var cls1 = ""
-        try {
-          cls1 = await upperfirstLetter(ldet[0][0])
-        } catch {
-            var ufns = await translatte("Dil Bulunamadı", { from: "TR", to: config.LANG})
-            return await message.client.sendMessage(message.jid,ufns.text,MessageType.text)
         }
         var cls1 = await upperfirstLetter(ldet[0][0])
         var cls2 = ldet[0][1].toString()

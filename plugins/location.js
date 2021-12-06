@@ -1,13 +1,10 @@
-/* Copyright (C) 2020 Aqua Snake.
-
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
+/* Codded by @phaticusthiccy
+Telegram: t.me/phaticusthiccy
+Instagram: www.instagram.com/kyrie.baran
 */
 
 const Asena = require('../events');
-const {MessageType, GroupSettingChange} = require('@aqua-snake/cyber-bot-web'); // Boredom 😬
+const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys'); // Boredom 😬
 
 const Language = require('../language');
 const Lang = Language.getString('locate'); // Language supp. 😉

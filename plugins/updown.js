@@ -1,6 +1,6 @@
 /*
 const Asena = require('../events');
-const { MessageType } = require('@aqua-snake/cyber-bot-web');
+const { MessageType } = require('@adiwajshing/baileys');
 const { similarity } = require('../similarity')
 const Language = require('../language');
 const Lang = Language.getString('aiscanner');

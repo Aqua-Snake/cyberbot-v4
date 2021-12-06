@@ -1,9 +1,8 @@
-/* Copyright (C) 2020 Aqua Snake.
-
+/* 
+Heroku plugin for WhatsAsena - W4RR10R
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
+WhatsAsena - Yusuf Usta
 */
 
 const Asena = require('../events');
@@ -11,7 +10,7 @@ const Config = require('../config');
 const Heroku = require('heroku-client');
 const {secondsToHms} = require('./afk');
 const got = require('got');
-const {MessageType} = require('@aqua-snake/cyber-bot-web');
+const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 
 const Language = require('../language');

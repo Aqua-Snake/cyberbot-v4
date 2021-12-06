@@ -1,14 +1,9 @@
-/* Copyright (C) 2020 Aqua Snake.
+/*Coded by Aqua Snake */
 
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-
-Cyber Bot - Aqua Snake
-*/
 
 const Asena = require('../events');
 const Config = require('../config');
-const {MessageType} = require('@aqua-snake/cyber-bot-web');
+const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 
 // List

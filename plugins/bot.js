@@ -7,7 +7,7 @@ Cyber Bot - Aqua-Snake
 */ 
 
 const Asena = require('../events');
-const {MessageType} = require('@aqua-snake/cyber-bot-web');
+const {MessageType} = require('@adiwajshing/baileys');
 const got = require("got");
 const fs = require('fs');
 const Config = require('../config');
@@ -20,7 +20,7 @@ Asena.addCommand({pattern: 'alive', fromMe: true, dontAddCommandList: true}, (as
 }
 
 else if (Config.WORKTYPE == 'public') {
-Asena.addCommand({pattern: 'alive', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 	
     await message.client.sendMessage(message.jid, fs.readFileSync('./media/cyberbot.mp3'), MessageType.audio, {mimetype: 'audio/mp4', ptt:true}, {quoted: message.data})
 }));

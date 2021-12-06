@@ -3,7 +3,7 @@ Develop by Aqua-Snake
 */
 
 const Asena = require('../events');
-const { MessageType, MessageOptions, Mimetype } = require('@aqua-snake/cyber-bot-web');
+const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
 const Config = require('../config');
